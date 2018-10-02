@@ -1,0 +1,41 @@
+{
+  "name": "json-transformer",
+  "version": "1.0.0",
+  "description": "A Package to minify your JSON data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxusr/json-transformer.git"
+  },
+  "keywords": [
+    "JSON",
+    "minify",
+    "JavaScript",
+    "Security",
+    "transform",
+    "parser"
+  ],
+  "author": "Maxime Florent F. <maxusr@gmail.com> (https://github.com/maxusr)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxusr/json-transformer/issues"
+  },
+  "homepage": "https://github.com/maxusr/json-transformer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "typescript": "^3.0.1"
+  }
+}
