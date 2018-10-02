@@ -10,7 +10,8 @@ This package include two important classes. Transformer and Reverser.
 
 ### Transformer
 It transforms your data before you send it to your clients. 
-`import { Transformer, transform } from 'json-transformer';
+```
+import { Transformer, transform } from 'json-transformer';
 
 
 /**** In your code ****/
@@ -24,15 +25,16 @@ const data = {
 res.json(Transformer.create().transform(data));
 //OR
 res.json(transform(data));
-`
+```
 
 ### Reverser
 It reverse json data previously tranformed by Transformer.
-`import { Reverser, reverse } from 'json-transformer';
+```
+import { Reverser, reverse } from 'json-transformer';
 
 
 /**** In your code ****/
 res.json(Reverser.create().reverse(data));
 //OR
 res.json(reverse(data));
-`
+```
